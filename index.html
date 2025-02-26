@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Lifestyle Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Your Dream Lifestyle Calculator</h1>
+        <p>Ready to see how much you need to live your dream life? Let's calculate the annual salary you need based on your lifestyle choices.</p>
+        <button id="begin-button" onclick="locationOptions()">Get Started</button>
+
+        <div id="location-options" class="option-group" style="display:none;">
+            <h2>Select Your Location</h2>
+            <button onclick="houseOptions(1.9)">Major City</button>
+            <button onclick="houseOptions(1.3)">Mid-Size City</button>
+            <button onclick="houseOptions(0.8)">Small Town/Suburb</button>
+        </div>
+
+        <div id="house-options" class="option-group" style="display:none;">
+            <h2>Choose Your Housing Type</h2>
+            <br>
+            <h3>Buy</h3>
+            <button onclick="carOptions(10550)">Mansion</button>
+            <button onclick="carOptions(3200)">Single Family</button>
+            <button onclick="carOptions(1600)">Small House</button>
+            <br>
+            <br>
+            <h3>Rent</h3>
+            <button onclick="carOptions(2000)">3 Bedroom</button>
+            <button onclick="carOptions(1500)">2 Bedroom</button>
+            <button onclick="carOptions(1000)">Studio</button>
+        </div>
+
+        <div id="car-options" class="option-group" style="display:none;">
+            <h2>Choose Your Car</h2>
+            <button onclick="foodOptions(1500)">Luxury</button>
+            <button onclick="foodOptions(600)">Average</button>
+            <button onclick="foodOptions(250)">Budget</button>
+        </div>
+
+        <div id="food-options" class="option-group" style="display:none;">
+            <h2>Food Spending</h2>
+            <button onclick="vacaOptions(700)">Eating Out Regularly</button>
+            <button onclick="vacaOptions(300)">Cooking at Home</button>
+        </div>
+
+        <div id="vaca-options" class="option-group" style="display:none;">
+            <h2>Vacation Spending</h2>
+            <button onclick="spendingOptions(1560)">Monthly</button>
+            <button onclick="spendingOptions(130)">Yearly</button>
+            <button onclick="spendingOptions(0)">None</button>
+        </div>
+
+        <div id="spending-options" class="option-group" style="display:none;">
+            <h2>What Type of Spender Are You?</h2>
+            <button onclick="petOptions(1500)">Heavy</button>
+            <button onclick="petOptions(700)">Medium</button>
+            <button onclick="petOptions(250)">Frugal</button>
+        </div>
+
+        <div id="pet-options" class="option-group" style="display:none;">
+            <h2>Choose Your Pets</h2>
+            <div>
+                <br>
+                <h3>Dogs</h3>
+                <button onclick="updatePetCount('dog', 1); changeButtonColor(this, 'dog')">1</button>
+                <button onclick="updatePetCount('dog', 2); changeButtonColor(this, 'dog')">2</button>
+                <button onclick="updatePetCount('dog', 3); changeButtonColor(this, 'dog')">3</button>
+                <button onclick="updatePetCount('dog', 4); changeButtonColor(this, 'dog')">4</button>
+                <button onclick="updatePetCount('dog', 5); changeButtonColor(this, 'dog')">5</button>
+            </div>
+            <div>
+                <br>
+                <br>
+                <h3>Cats</h3>
+                <button onclick="updatePetCount('cat', 1); changeButtonColor(this, 'cat')">1</button>
+                <button onclick="updatePetCount('cat', 2); changeButtonColor(this, 'cat')">2</button>
+                <button onclick="updatePetCount('cat', 3); changeButtonColor(this, 'cat')">3</button>
+                <button onclick="updatePetCount('cat', 4); changeButtonColor(this, 'cat')">4</button>
+                <button onclick="updatePetCount('cat', 5); changeButtonColor(this, 'cat')">5</button>
+            </div>
+            <div>
+                <br>
+                <br>
+                <h3>Hamsters</h3>
+                <button onclick="updatePetCount('hamster', 1); changeButtonColor(this, 'hamster')">1</button>
+                <button onclick="updatePetCount('hamster', 2); changeButtonColor(this, 'hamster')">2</button>
+                <button onclick="updatePetCount('hamster', 3); changeButtonColor(this, 'hamster')">3</button>
+                <button onclick="updatePetCount('hamster', 4); changeButtonColor(this, 'hamster')">4</button>
+                <button onclick="updatePetCount('hamster', 5); changeButtonColor(this, 'hamster')">5</button>
+            </div>
+            <br>
+            <button onclick="summaryFunc()">Calculate</button>
+        </div>
+
+        <div id="summary" class="option-group" style="display:none;">
+            <h2>Your Estimated Yearly Salary</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
