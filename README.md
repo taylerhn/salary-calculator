@@ -1,1 +1,1 @@
-How much does your dream life cost?
+# Salary Calculator
